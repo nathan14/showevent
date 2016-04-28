@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>ShowEvent - Results</title>
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<link rel="stylesheet" href="includes/css/bootstrap.css">
+		<link rel="stylesheet" href="includes/css/font-awesome.min.css">
+		<link rel="stylesheet" href="includes/css/daterangepicker.css">
+		<link rel="stylesheet" href="includes/css/style.css">
+		<script type="text/javascript" src="includes/js/lib/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="includes/js/lib/moment.js"></script>
+		<script type="text/javascript" src="includes/js/lib/underscore.js"></script>
+		<script type="text/javascript" src="includes/js/lib/bootstrap.js"></script>
+		<script type="text/javascript" src="includes/js/lib/clndr.js"></script>
+		<script type="text/javascript" src="includes/js/lib/bootstrap3-typeahead.min.js"></script>
+		<script type="text/javascript" src="includes/js/lib/daterangepicker.js"></script>
+		<script type="text/javascript" src="includes/js/lib/jquery.base64.min.js"></script>
+		<script type="text/javascript" src="includes/js/lib/jquery.bingsearch.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<!-- load header -->
+		</header>
+		<main class="container-fluid">
+			<section class="col-xs-12 part part-jumbotron" id="results-jumbotron">
+				<div class="part-title">
+					<h1>Search Results</h1>
+				</div>
+				<div class="col-xs-12">
+					<form id="form-search-results" class="form-inline" action="results.html" method="GET">
+						<fieldset class="form-group">
+							<input type="text" name="country" id="form-search-results-country" class="form-control input-lg" placeholder="Country" autocomplete="off">
+						</fieldset>
+						<fieldset class="form-group">
+							<input type="text" name="city" id="form-search-results-city" class="form-control input-lg no-pointer-events" placeholder="City" autocomplete="off">
+						</fieldset>
+						<fieldset class="form-group">
+							<input type="text" name="date-range-start" id="form-search-results-date-range-start" class="form-control input-lg datepicker datepicker-start" placeholder="Date Range" autocomplete="off">
+						</fieldset>
+						<fieldset class="form-group">
+							<input type="text" name="date-range-end" id="form-search-results-date-range-end" class="form-control input-lg datepicker datepicker-end" placeholder="To Date" autocomplete="off">
+						</fieldset>
+						<fieldset class="form-group">
+							<input type="hidden" name="city-id" class="form-city-id" id="form-search-results-city-id">
+						</fieldset>
+						<button type="submit" class="btn btn-lg btn-primary">Find Concert <i class="fa fa-search"></i> </button>
+					</form>
+				</div>
+				<div class="part-utils col-xs-12">
+					<button class="btn btn-inverse" id="results-sort-btn">Sort</button>
+					<div id="results-sort-tooltip">
+						<ul>
+							<li class="sort-method active" data-sort-method="upcoming">Upcoming</li>
+							<li class="sort-method" data-sort-method="popularity">Popularity</li>
+						</ul>
+					</div>
+					<div class="social-btns">
+						<a id="results-fb-share" href="" target="_blank" class="btn btn-fb">Facebook</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<section class="part part-inverse col-xs-12">
+				<div id="events">
+					<!-- Load Events API -->
+				</div>
+				<div id="events-by-songkick" class="col-xs-12">
+					<a href="http://songkick.com">
+						<img src="img/songkick.png" alt="Songkick">
+					</a>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<!-- load footer -->
+		</footer>
+		<script type="text/javascript" src="includes/js/utils.js"></script>
+		<script type="text/javascript" src="includes/js/results.js"></script>
+	</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>ShowEvent</title>
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<link rel="stylesheet" href="includes/css/bootstrap.css">
+		<link rel="stylesheet" href="includes/css/font-awesome.min.css">
+		<link rel="stylesheet" href="includes/css/daterangepicker.css">
+		<link rel="stylesheet" href="includes/css/style.css">
+		<script type="text/javascript" src="includes/js/lib/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="includes/js/lib/moment.js"></script>
+		<script type="text/javascript" src="includes/js/lib/underscore.js"></script>
+		<script type="text/javascript" src="includes/js/lib/bootstrap.js"></script>
+		<script type="text/javascript" src="includes/js/lib/clndr.js"></script>
+		<script type="text/javascript" src="includes/js/lib/bootstrap3-typeahead.min.js"></script>
+		<script type="text/javascript" src="includes/js/lib/daterangepicker.js"></script>
+		<script type="text/javascript" src="includes/js/lib/jquery.base64.min.js"></script>
+		<script type="text/javascript" src="includes/js/lib/jquery.bingsearch.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<!-- load header -->
+		</header>
+		<main class="container-fluid">
+			<section class="jumbotron">
+				<div class="part-img"></div>
+				<h2 class="display-3 text-white">
+					Any Concert, Any Time
+				</h2>
+				<p class="lead jumbotron-lead">
+					ShowEvent helps you find the right band at the right place at the right time.
+				</p>
+				<form id="form-search-main" class="form-inline" action="results.html" method="GET">
+					<fieldset class="form-group">
+						<input type="text" name="country" id="form-search-country" class="form-control input-lg" placeholder="Country" autocomplete="off">
+					</fieldset>
+					<fieldset class="form-group">
+						<input type="text" name="city" id="form-search-city" class="form-control input-lg no-pointer-events" placeholder="City" autocomplete="off">
+					</fieldset>
+					<fieldset class="form-group">
+						<input type="text" name="date-range-start" id="form-search-date-range-start" class="form-control input-lg datepicker datepicker-start" placeholder="From Date" autocomplete="off">
+					</fieldset>
+					<fieldset class="form-group">
+						<input type="text" name="date-range-end" id="form-search-date-range-end" class="form-control input-lg datepicker datepicker-end" placeholder="To Date" autocomplete="off">
+					</fieldset>
+					<fieldset class="form-group">
+						<input type="hidden" name="city-id" class="form-city-id" id="form-search-city-id">
+					</fieldset>
+					<button type="submit" class="btn btn-lg btn-jumbotron btn-primary">Find Concert <i class="fa fa-search"></i> </button>
+				</form>
+			</section>
+			<section class="col-xs-12 part">
+				<div class="part-title">
+					<h1>ShowEvent</h1>
+				</div>
+				<div class="col-sm-4">
+					<div class="card back-white">
+						<img class="card-img-top" src="img/music.jpg" alt="Music">
+						<div class="card-blcok">
+							<h4 class="card-title">
+								<i class="fa fa-heart"></i> The Music You Love
+							</h4>
+							<p class="card-text">You favorite artists at your grasp</p>
+							<a href="#" class="btn btn-lg btn-primary">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card back-white">
+						<img class="card-img-top" src="img/location.jpg" alt="Location">
+						<div class="card-blcok">
+							<h4 class="card-title">
+								<i class="fa fa-location-arrow"></i> At Your Location
+							</h4>
+							<p class="card-text">Tell us where, we'll get the data</p>
+							<a href="#" class="btn btn-lg btn-primary">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card back-white">
+						<img class="card-img-top" src="img/date.jpg" alt="Date">
+						<div class="card-blcok">
+							<h4 class="card-title">
+								<i class="fa fa-calendar"></i> Right at Time
+							</h4>
+							<p class="card-text">Never miss and event again</p>
+							<a href="#" class="btn btn-lg btn-primary">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="col-xs-12 part part-inverse">
+				<div class="col-md-6" id="featured-events">
+					<div class="part-title part-title-half-page">
+						<h2>Featured Events</h2>
+					</div>
+					<div id="featured-events-carousel" class="carousel slide card" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<!-- load items -->
+						</ol>
+						<div class="carousel-inner" role="listbox">
+							<!-- load items -->
+						</div>
+						<a class="left carousel-control" href="#featured-events-carousel" role="button" data-slide="prev">
+							<span class="icon-prev" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#featured-events-carousel" role="button" data-slide="next">
+							<span class="icon-next" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+					<br>
+				</div>
+				<div class="col-md-6">
+					<div class="part-title part-title-half-page">
+						<h2>Calendar</h2>
+					</div>
+					<div id="calendar"></div>
+				</div>
+			</section>
+			<section class="col-xs-12 part">
+				<div class="part-title">
+					<h2>Nearyby Events</h2>
+				</div>
+				<div id="events">
+					<!-- Load Events API -->
+				</div>
+				<div id="events-by-songkick" class="col-xs-12">
+					<a href="http://songkick.com">
+						<img src="img/songkick.png" alt="SongKick">
+					</a>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<!-- load footer -->
+		</footer>
+		<div class="modal" id="modal-calendar-event">
+			<div class="modal-dialog modal-sm modal-no-body" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title">Calendar Event</h4>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary event-click float-left" data-event-id="">Details</button>
+						<button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="includes/js/utils.js"></script>
+		<script type="text/javascript" src="includes/js/index.js"></script>
+	</body>
+</html>

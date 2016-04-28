@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>ShowEvent - Add Featured Event</title>
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<link rel="stylesheet" href="includes/css/bootstrap.css">
+		<link rel="stylesheet" href="includes/css/font-awesome.min.css">
+		<link rel="stylesheet" href="includes/css/daterangepicker.css">
+		<link rel="stylesheet" href="includes/css/style.css">
+		<script type="text/javascript" src="includes/js/lib/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="includes/js/lib/moment.js"></script>
+		<script type="text/javascript" src="includes/js/lib/underscore.js"></script>
+		<script type="text/javascript" src="includes/js/lib/bootstrap.js"></script>
+		<script type="text/javascript" src="includes/js/lib/daterangepicker.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<!-- load header -->
+		</header>
+		<main class="container-fluid">
+			<section class="col-xs-12 part part-jumbotron" id="add-featured-event-jumbotron">
+				<div class="part-title">
+					<h1 class="text-white">Add Featured Event</h1>
+				</div>
+			</section>
+			<section class="col-xs-12 part part-inverse" id="add-featured-event">
+				<div class="col-xs-12">
+					<form id="form-new-event" class="form-no-full-width">
+						<fieldset class="form-group col-md-4">
+							<input type="text" name="performer-name" id="form-new-event-performer-name" class="form-control input-lg" placeholder="Performer">
+						</fieldset>
+						<fieldset class="form-group col-md-2">
+							<input type="text" name="event-date-time" id="form-new-event-date-time" class="form-control input-lg datetimepicker" placeholder="Date and Time">
+						</fieldset>
+						<fieldset class="form-group col-md-2">
+							<input type="number" name="event-price" id="form-new-event-price" value="" min="10" step="10" class="form-control input-lg currency" placeholder="Price">
+						</fieldset>
+						<fieldset class="form-group col-md-4">
+							<input type="text" name="event-location" id="form-new-event-location" class="form-control input-lg" placeholder="Location">
+						</fieldset>
+						<fieldset class="form-group col-md-4">
+							<input type="text" name="event-img" id="form-new-event-img" class="form-control input-lg" placeholder="Image URL">
+						</fieldset>
+						<fieldset class="form-group col-md-4">
+							<input type="text" name="event-website" id="form-new-event-website" class="form-control input-lg" placeholder="Website">
+						</fieldset>
+						<fieldset class="form-group col-md-4">
+							<input type="text" name="event-buy-tickets" id="form-new-event-buy-tickets" class="form-control input-lg" placeholder="Tickets Link">
+						</fieldset>
+						<fieldset class="form-group col-md-12">
+							<textarea rows="4" name="event-content-textarea" id="form-new-event-content" class="form-control" placeholder="Content"></textarea>
+						</fieldset>
+						<div class="clear"></div>
+						<button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-plus"></i> Add</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<!-- load footer -->
+		</footer>
+		<script type="text/javascript" src="includes/js/add-featured-event.js"></script>
+		<script type="text/javascript" src="includes/js/utils.js"></script>
+	</body>
+</html>
